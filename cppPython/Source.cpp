@@ -5,7 +5,6 @@
 #include <string>
 
 using namespace std;
-//
 
 /*
 Description:
@@ -75,7 +74,7 @@ Return:
 	// Finish the Python Interpreter
 	Py_Finalize();
 }
-
+//Function for multiplication table
 void MultiplicationTable() {
 	int num;
 	cout << "Please choose a number: " << endl;
@@ -84,6 +83,7 @@ void MultiplicationTable() {
 	callIntFunc("MultiplicationTable", num);
 }
 
+//Function for doubling user number value
 void DoubleNum() {
 	int num;
 	cout << "Please choose a number: " << endl;
@@ -92,6 +92,7 @@ void DoubleNum() {
 	callIntFunc("DoubleValue", num);
 }
 
+//Loop function for menu options
 void GetUserInput() {
 	while (true)
 	{
@@ -100,21 +101,18 @@ void GetUserInput() {
 		cin >> user;
 		cout << endl;
 		if (user == 1) {
-			cout << "string" << endl;
 			MultiplicationTable();
 		}
 		else if (user == 2) {
 			DoubleNum();
 		}
 		else if (user == 3) {
-			cout << "break" << endl;
 			break;
 		}
 	}
 	while (true) {
 		int num = 1;
 		if (num == 1) {
-			cout << "txt" << endl;
 			break;
 		}
 
