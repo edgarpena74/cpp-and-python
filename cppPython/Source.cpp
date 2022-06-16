@@ -99,7 +99,8 @@ Example:
 Return:
 	25 is returned to the C++
 */
-int callIntFunc(string proc, int param)
+//NOTE: removed int function()
+ void callIntFunc(string proc, int param)
 {
 	char* procname = new char[proc.length() + 1];
 	std::strcpy(procname, proc.c_str());
@@ -134,11 +135,11 @@ int callIntFunc(string proc, int param)
 	// Finish the Python Interpreter
 	Py_Finalize();
 
-	// clean 
-	delete[] procname;
-	//delete[] param;
+	//// clean 
+	//delete[] procname;
+	////delete[] param;
 
-	return _PyLong_AsInt(presult);
+	//return _PyLong_AsInt(presult);
 
 }
 
@@ -159,36 +160,7 @@ void DoubleNum() {
 }
 
 void GetUserInput() {
-	do
-	{
-		int user;
-		CallProcedure("PrintMenu");
-		cin >> user;
-		cout << endl;
-		if (user == 1) {
-			cout << "string" << endl;
-			MultiplicationTable();
-		}
-		else if (user == 2) {
-			DoubleNum();
-		}
-		else if (user == 3) { 
-			cout << "break" << endl;
-			break; }
-	} while (true);
-}
-
-
-
-
-int main()
-{
-	//CallProcedure("PrintMenu");
-	//GetUserInput();
-	//cout << callIntFunc("PrintMe", "House") << endl;
-	//cout << callIntFunc("SquareValue", 2);
-	cout << "main" << endl;
-	while(true)
+	while (true)
 	{
 		int user;
 		CallProcedure("PrintMenu");
@@ -205,7 +177,7 @@ int main()
 			cout << "break" << endl;
 			break;
 		}
-	} 
+	}
 	while (true) {
 		int num = 1;
 		if (num == 1) {
@@ -214,6 +186,19 @@ int main()
 		}
 
 	}
+}
+
+
+
+
+int main()
+{
+	//CallProcedure("PrintMenu");
+	GetUserInput();
+	//cout << callIntFunc("PrintMe", "House") << endl;
+	//cout << callIntFunc("SquareValue", 2);
+	cout << "main" << endl;
+
 	return 0;
 
 }

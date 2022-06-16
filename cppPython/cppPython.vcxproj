@@ -179,7 +179,9 @@ xcopy /y /d /I "D:\Visual Studio\SNHU\cppPython\x64\Debug\python_modules\my_modu
     <Text Include="pythonBackUp.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\x64\Debug\python_modules\my_module.py" />
+    <None Include="..\x64\Debug\python_modules\my_module.py">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="python_modules\my_module.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
