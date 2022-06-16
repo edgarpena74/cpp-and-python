@@ -1,0 +1,20 @@
+import re
+import string
+
+
+def PrintMenu():
+    print("1: Display a Multiplication Table")
+    print("2: Double a Value")
+    print("3: Exit")
+    print("Enter your selection as a number 1, 2, or 3.")
+
+def PrintMe(v):
+    for i in range(1, 11):
+        multNum = v * i
+        print(v, "X", i, "=", multNum)
+        
+
+        
+
+def SquareValue(v):
+    print(v * v)
