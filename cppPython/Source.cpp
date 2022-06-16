@@ -100,22 +100,18 @@ void GetUserInput() {
 		CallProcedure("PrintMenu");
 		cin >> user;
 		cout << endl;
+		//Option for multiplication table
 		if (user == 1) {
 			MultiplicationTable();
 		}
+		//Option for doubling user value
 		else if (user == 2) {
 			DoubleNum();
 		}
+		//break loop
 		else if (user == 3) {
 			break;
 		}
-	}
-	while (true) {
-		int num = 1;
-		if (num == 1) {
-			break;
-		}
-
 	}
 }
 
@@ -124,6 +120,7 @@ void GetUserInput() {
 
 int main()
 {
+	//Call menu function
 	GetUserInput();
 	return 0;
 
