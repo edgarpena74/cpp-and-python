@@ -5,6 +5,7 @@
 #include <string>
 
 using namespace std;
+//
 
 /*
 Description:
@@ -31,66 +32,6 @@ void CallProcedure(string pName)
 	delete[] procname;
 }
 
-
-
-/*
-Description:
-	To call this function, pass the name of the Python functino you wish to call and the string parameter you want to send
-Example:
-	int x = callIntFunc("PrintMe","Test");
-Output:
-	Python will print on the screen:
-		You sent me: Test
-Return:
-	100 is returned to the C++
-*/
-//int callIntFunc(string proc, string param)
-//{
-//	char* procname = new char[proc.length() + 1];
-//	std::strcpy(procname, proc.c_str());
-//
-//	char* paramval = new char[param.length() + 1];
-//	std::strcpy(paramval, param.c_str());
-//
-//
-//	PyObject* pName, * pModule, * pDict, * pFunc, * pValue = nullptr, * presult = nullptr;
-//	// Initialize the Python Interpreter
-//	Py_Initialize();
-//	// Build the name object
-//	pName = PyUnicode_FromString((char*)"python_modules.my_module");
-//	// Load the module object
-//	pModule = PyImport_Import(pName);
-//	// pDict is a borrowed reference 
-//	pDict = PyModule_GetDict(pModule);
-//	// pFunc is also a borrowed reference 
-//	pFunc = PyDict_GetItemString(pDict, procname);
-//	if (PyCallable_Check(pFunc))
-//	{
-//		pValue = Py_BuildValue("(z)", paramval);
-//		PyErr_Print();
-//		presult = PyObject_CallObject(pFunc, pValue);
-//		PyErr_Print();
-//	}
-//	else
-//	{
-//		PyErr_Print();
-//	}
-//	//printf("Result is %d\n", _PyLong_AsInt(presult));
-//	Py_DECREF(pValue);
-//	// Clean up
-//	Py_DECREF(pModule);
-//	Py_DECREF(pName);
-//	// Finish the Python Interpreter
-//	Py_Finalize();
-//
-//	// clean 
-//	delete[] procname;
-//	delete[] paramval;
-//
-//
-//	return _PyLong_AsInt(presult);
-//}
-
 /*
 Description:
 	To call this function, pass the name of the Python function you wish to call and the string parameter you want to send
@@ -99,7 +40,6 @@ Example:
 Return:
 	25 is returned to the C++
 */
-//NOTE: removed int function()
  void callIntFunc(string proc, int param)
 {
 	char* procname = new char[proc.length() + 1];
@@ -134,13 +74,6 @@ Return:
 	Py_DECREF(pName);
 	// Finish the Python Interpreter
 	Py_Finalize();
-
-	//// clean 
-	//delete[] procname;
-	////delete[] param;
-
-	//return _PyLong_AsInt(presult);
-
 }
 
 void MultiplicationTable() {
@@ -193,12 +126,7 @@ void GetUserInput() {
 
 int main()
 {
-	//CallProcedure("PrintMenu");
 	GetUserInput();
-	//cout << callIntFunc("PrintMe", "House") << endl;
-	//cout << callIntFunc("SquareValue", 2);
-	cout << "main" << endl;
-
 	return 0;
 
 }
