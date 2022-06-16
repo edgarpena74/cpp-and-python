@@ -187,7 +187,7 @@ int main()
 	//GetUserInput();
 	//cout << callIntFunc("PrintMe", "House") << endl;
 	//cout << callIntFunc("SquareValue", 2);
-	cout << "main main" << endl;
+	cout << "main" << endl;
 	while(true)
 	{
 		int user;
